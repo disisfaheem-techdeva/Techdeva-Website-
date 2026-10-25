@@ -1,0 +1,97 @@
+/*
+ * TechDeva design tokens. Brand values follow the live techdeva.net
+ * (dark #0E0E0E canvas, Inter body, Space Grotesk headings, green→cyan
+ * accent). See docs/zoho-research/techdeva-design-system.md.
+ */
+:root {
+  color-scheme: dark;
+
+  /* Surfaces — four steps so sections can alternate without new colours */
+  --bg: #0b0d10;
+  --bg-alt: #0f1216;
+  --surface: #13171c;
+  --surface-2: #181d24;
+  --surface-3: #1f2630;
+  --line: #242b35;
+  --line-strong: #323b48;
+
+  /* Text — all ≥ 4.5:1 on --bg and --surface */
+  --text: #f3f6fa;
+  --text-2: #c2cad5;
+  --muted: #8f9aaa;
+
+  /* Brand */
+  --green: #34d399;
+  --cyan: #22d3ee;
+  --gold: #d4af5f;
+  --grad: linear-gradient(100deg, var(--green), var(--cyan));
+  --on-accent: #04140f;
+
+  /* Status */
+  --live: #34d399;
+  --early: #22d3ee;
+  --dev: #f0a83c;
+  --danger: #f2777a;
+
+  /* Type */
+  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: clamp(1.5rem, 1.2rem + 1vw, 1.875rem);
+  /* Display sizes run large, in the manner of Apple product pages: headlines
+     carry the page and copy stays short beneath them. */
+  --fs-2xl: clamp(2rem, 1.3rem + 2.4vw, 3.25rem);
+  --fs-3xl: clamp(2.5rem, 1.2rem + 3.8vw, 4.75rem);
+  --lh-tight: 1.1;
+  --lh-snug: 1.3;
+  --lh-body: 1.65;
+
+  /* Space — 4px base */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4rem;
+  --s-9: 6rem;
+  --section-y: clamp(3.5rem, 2.5rem + 4vw, 6.5rem);
+
+  /* Layout */
+  --container: 1200px;
+  --container-narrow: 820px;
+  --gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
+  --header-h: 68px;
+
+  /* Shape */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+  --r-pill: 999px;
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-2: 0 12px 32px rgb(0 0 0 / 0.45);
+  --shadow-3: 0 24px 64px rgb(0 0 0 / 0.55);
+  --glow: 0 10px 30px rgb(34 211 238 / 0.22);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --t-fast: 140ms;
+  --t-base: 220ms;
+  --t-slow: 480ms;
+
+  --focus: 0 0 0 3px var(--bg), 0 0 0 5px var(--cyan);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-fast: 0ms;
+    --t-base: 0ms;
+    --t-slow: 0ms;
+  }
+}
